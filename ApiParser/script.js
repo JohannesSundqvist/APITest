@@ -1,7 +1,7 @@
 $(document).on("click", "#refreshAll", function() {
       $.ajax({
         type: "get",
-        url: "https://localhost:44301/api/getposts/" + $("#postOrUser").val(),
+        url: "http://localhost:5000/api/getposts/" + $("#postOrUser").val(),
         success: function(r) {
           var msg = "";
           if(Array.isArray(r)) {
@@ -24,7 +24,7 @@ $(document).on("click", "#refreshAll", function() {
       });
       $.ajax({
         type: "get",
-        url: "https://localhost:44301/api/getusers/" + $("#postOrUser").val(),
+        url: "http://localhost:5000/api/getusers/" + $("#postOrUser").val(),
         success: function(r) {
           var msg = "";
           if(Array.isArray(r)) {
